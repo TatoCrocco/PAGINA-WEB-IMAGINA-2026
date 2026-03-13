@@ -34,7 +34,7 @@ const About: React.FC = () => {
             
             <div className="about-stats">
               <div className="stat-item">
-                <span className="stat-number">10+</span>
+                <span className="stat-number">30+</span>
                 <span className="stat-label">Años de Exp.</span>
               </div>
               <div className="stat-item">
