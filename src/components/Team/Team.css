@@ -54,7 +54,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   transition: bottom var(--transition-normal);
 }
 

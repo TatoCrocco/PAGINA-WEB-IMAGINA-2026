@@ -14,8 +14,8 @@ const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('Todos');
   const categories = ['Todos', 'Bodas', '15 Años', 'Eventos', 'Cinematografía'];
 
-  const filteredItems = filter === 'Todos' 
-    ? portfolioItems 
+  const filteredItems = filter === 'Todos'
+    ? portfolioItems
     : portfolioItems.filter(item => item.category === filter);
 
   return (
@@ -24,11 +24,11 @@ const Portfolio: React.FC = () => {
         <h2 className="section-title text-center reveal">
           Nuestro <span className="text-accent">Portfolio</span>
         </h2>
-        
+
         <div className="portfolio-filters reveal delay-1">
           {categories.map(cat => (
-            <button 
-              key={cat} 
+            <button
+              key={cat}
               className={`filter-btn ${filter === cat ? 'active' : ''}`}
               onClick={() => setFilter(cat)}
             >
@@ -48,7 +48,7 @@ const Portfolio: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center" style={{ marginTop: '3rem' }}>
           <a href="#" className="btn btn-outline reveal delay-3">Ver Galería Completa</a>
         </div>
