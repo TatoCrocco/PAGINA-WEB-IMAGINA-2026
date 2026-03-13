@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './Portfolio.css';
 
 const portfolioItems = [
-  { id: 1, type: 'image', category: 'Bodas', url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop', title: 'Boda de Ana & Carlos' },
-  { id: 2, type: 'image', category: '15 Años', url: 'https://images.unsplash.com/photo-1571556391901-7649d28e75db?q=80&w=2070&auto=format&fit=crop', title: 'Mis 15 Sofía' },
-  { id: 3, type: 'image', category: 'Bodas', url: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop', title: 'Boda de Laura & Marcos' },
-  { id: 4, type: 'image', category: 'Eventos', url: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=2070&auto=format&fit=crop', title: 'Fiesta de Fin de Año' },
-  { id: 5, type: 'image', category: '15 Años', url: 'https://images.unsplash.com/photo-1621528434685-d8c9735d568c?q=80&w=1974&auto=format&fit=crop', title: 'Mis 15 Valentina' },
-  { id: 6, type: 'video', category: 'Cinematografía', url: 'https://images.unsplash.com/photo-1604928140439-01258832a829?q=80&w=2070&auto=format&fit=crop', title: 'Reel 2025' },
+  { id: 1, type: 'image', category: 'Bodas', url: './boda-1.jpg', title: 'Momentos Épicos' },
+  { id: 2, type: 'image', category: '15 Años', url: './15-anos-1.webp', title: '15 Años Inolvidables' },
+  { id: 3, type: 'image', category: 'Bodas', url: './boda-2.webp', title: 'Amor y Emoción' },
+  { id: 4, type: 'image', category: 'Eventos', url: './evento-1.webp', title: 'Cobertura Especial' },
+  { id: 5, type: 'image', category: '15 Años', url: './15-anos-2.webp', title: 'Noche Mágica' },
+  { id: 6, type: 'video', category: 'Cinematografía', url: './video-1.jpg', title: 'Nuestros Reels' },
 ];
 
 const Portfolio: React.FC = () => {
