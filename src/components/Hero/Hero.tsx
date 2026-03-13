@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="hero-content container">
-        <img src="/logo.png" alt="IMAGINA Logo" className="hero-logo fade-in-up" />
+        <img src="./logo.png" alt="IMAGINA Logo" className="hero-logo fade-in-up" />
         <h1 className="hero-title fade-in-up delay-1">
           Capturamos los momentos que vas a querer recordar <span className="text-accent">toda la vida</span>
         </h1>

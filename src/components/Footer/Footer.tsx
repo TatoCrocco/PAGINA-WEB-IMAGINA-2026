@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="footer" id="contact">
       <div className="container footer-content">
         <div className="footer-brand">
-          <img src="/logo.png" alt="IMAGINA Logo" className="footer-logo" />
+          <img src="./logo.png" alt="IMAGINA Logo" className="footer-logo" />
           <p className="footer-description">
             Productora audiovisual especializada en fotografía y video cinematográfico para eventos sociales.
           </p>

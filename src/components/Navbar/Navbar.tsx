@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-content">
         <a href="#home" className="navbar-logo">
-          <img src="/logo.png" alt="IMAGINA Logo" />
+          <img src="./logo.png" alt="IMAGINA Logo" />
         </a>
 
         {/* Desktop Menu */}
