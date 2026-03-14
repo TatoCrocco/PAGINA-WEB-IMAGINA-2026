@@ -7,11 +7,14 @@ const Hero: React.FC = () => {
       <div className="hero-background">
         {/* Placeholder image for cinematic background. We can replace this with a local video or high-quality asset if provided */}
         <div className="hero-overlay"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" 
-          alt="Wedding Cinematic Background" 
-          className="hero-img"
-        />
+        <video 
+          src="/video-fondo.webm" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="hero-video"
+        ></video>
       </div>
       
       <div className="hero-content container">
