@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         {/* Placeholder image for cinematic background. We can replace this with a local video or high-quality asset if provided */}
         <div className="hero-overlay"></div>
         <video 
-          src="/video-fondo.webm" 
+          src="./video-fondo.webm" 
           autoPlay 
           loop 
           muted 
