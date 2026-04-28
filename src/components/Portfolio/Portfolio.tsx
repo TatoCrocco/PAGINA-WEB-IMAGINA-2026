@@ -8,6 +8,12 @@ const portfolioItems = [
   { id: 4, type: 'image', category: 'Eventos', url: './evento-1.webp', title: 'Cobertura Especial' },
   { id: 5, type: 'image', category: '15 Años', url: './15-anos-2.webp', title: 'Noche Mágica' },
   { id: 6, type: 'video', category: 'Cinematografía', url: './video-1.jpg', title: 'Nuestros Reels' },
+  { id: 7, type: 'image', category: 'Bodas', url: './boda-3.webp', title: 'Conexión Única' },
+  { id: 8, type: 'image', category: '15 Años', url: './15-anos-3.webp', title: 'Detalles Mágicos' },
+  { id: 9, type: 'image', category: 'Eventos', url: './evento-2.webp', title: 'Energía y Fiesta' },
+  { id: 10, type: 'image', category: 'Bodas', url: './boda-4.webp', title: 'Esencia y Estilo' },
+  { id: 11, type: 'image', category: '15 Años', url: './15-anos-4.webp', title: 'Tu Gran Noche' },
+  { id: 12, type: 'video', category: 'Cinematografía', url: './video-2.jpg', title: 'Historias en Movimiento' },
 ];
 
 const Portfolio: React.FC = () => {
