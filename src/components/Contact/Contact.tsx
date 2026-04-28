@@ -18,8 +18,24 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate sending form data
-    alert('Mensaje enviado correctamente. Nos pondremos en contacto a la brevedad.');
+    
+    // Formatear mensaje para WhatsApp
+    const whatsappMessage = `Hola IMAGINA! 👋
+Mi nombre es: ${formData.name}
+Tipo de evento: ${formData.eventType}
+Fecha: ${formData.eventDate || 'A confirmar'}
+Teléfono: ${formData.phone}
+Email: ${formData.email}
+
+Mensaje:
+${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/543414024527?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+
+    // Limpiar formulario después de enviar
     setFormData({
       name: '',
       email: '',
