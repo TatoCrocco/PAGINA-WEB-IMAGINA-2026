@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const portfolioItems = [
   { id: 1, type: 'image', category: 'Bodas', url: './boda-1.jpg', title: 'Momentos Épicos' },
@@ -18,11 +19,34 @@ const portfolioItems = [
 
 const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('Todos');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const categories = ['Todos', 'Bodas', '15 Años', 'Eventos', 'Cinematografía'];
 
   const filteredItems = filter === 'Todos'
     ? portfolioItems
     : portfolioItems.filter(item => item.category === filter);
+
+  // Reset index when filter changes
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [filter]);
+
+  const nextSlide = () => {
+    if (currentIndex < filteredItems.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+    } else {
+      setCurrentIndex(0); // Loop to start
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    } else {
+      setCurrentIndex(filteredItems.length - 1); // Loop to end
+    }
+  };
 
   return (
     <section id="portfolio" className="portfolio section-padding">
@@ -43,16 +67,33 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
 
-        <div className="portfolio-grid">
-          {filteredItems.map((item, index) => (
-            <div className={`portfolio-item reveal delay-${index % 3 + 1}`} key={item.id}>
-              <img src={item.url} alt={item.title} className="portfolio-img" />
-              <div className="portfolio-overlay">
-                <span className="portfolio-category">{item.category}</span>
-                <h3 className="portfolio-item-title">{item.title}</h3>
-              </div>
+        <div className="portfolio-carousel-wrapper reveal delay-2">
+          <button className="carousel-btn prev" onClick={prevSlide} aria-label="Previous slide">
+            <ChevronLeft size={32} />
+          </button>
+          
+          <div className="portfolio-slider-container">
+            <div 
+              className="portfolio-slider" 
+              style={{ transform: `translateX(-${currentIndex * (100 / filteredItems.length)}%)`, width: `${(filteredItems.length * 100)}%` }}
+            >
+              {filteredItems.map((item) => (
+                <div className="portfolio-slide" key={item.id} style={{ width: `${100 / filteredItems.length}%` }}>
+                  <div className="portfolio-item">
+                    <img src={item.url} alt={item.title} className="portfolio-img" />
+                    <div className="portfolio-overlay">
+                      <span className="portfolio-category">{item.category}</span>
+                      <h3 className="portfolio-item-title">{item.title}</h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <button className="carousel-btn next" onClick={nextSlide} aria-label="Next slide">
+            <ChevronRight size={32} />
+          </button>
         </div>
 
         <div className="text-center" style={{ marginTop: '3rem' }}>

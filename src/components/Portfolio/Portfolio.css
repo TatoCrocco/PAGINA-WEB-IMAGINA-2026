@@ -27,23 +27,37 @@
   border-color: var(--text-main);
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  /* Cinematic offset layout trick if desired, keeping simple clean grid for now */
+/* Carousel Styles */
+.portfolio-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio-slider-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--border-radius-md);
+}
+
+.portfolio-slider {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.portfolio-slide {
+  padding: 0 0.75rem;
+  flex-shrink: 0;
 }
 
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius-sm);
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/5;
   cursor: pointer;
-}
-
-.portfolio-item:nth-child(even) {
-  aspect-ratio: 3/4;
 }
 
 .portfolio-img {
@@ -100,4 +114,52 @@
 
 .portfolio-item:hover .portfolio-item-title {
   transform: translateY(0);
+}
+
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent-gold);
+  color: var(--bg-darker);
+  border-color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none; /* Hide buttons on mobile, use touch if needed (later) */
+  }
+  
+  .portfolio-slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar for Chrome/Safari */
+  }
+  
+  .portfolio-slider-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .portfolio-slider {
+    transform: none !important;
+    width: auto !important;
+  }
+  
+  .portfolio-slide {
+    width: 85% !important;
+    scroll-snap-align: center;
+  }
 }
