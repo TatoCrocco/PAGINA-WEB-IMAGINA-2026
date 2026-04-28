@@ -1,6 +1,6 @@
 import React from 'react';
 import './Team.css';
-import { Instagram, Mail } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -8,21 +8,21 @@ const teamMembers = [
     role: 'Fotógrafo, Filmmaker & Editor',
     description: 'Creador de contenido audiovisual. Apasionado por la narrativa visual y especializado en capturar la emoción pura de cada momento con un enfoque cinemático.',
     image: './tato1.jpeg',
-    socials: { instagram: '#', mail: '#' }
+    socials: { instagram: 'https://www.instagram.com/tatocrocco.ph' }
   },
   {
     name: 'Jorge Valido',
     role: 'Filmmaker & Piloto de Drone',
     description: 'Especialista en narrativa audiovisual y tomas aéreas impresionantes. Con su ojo cinematográfico y destreza técnica, Jorge eleva la perspectiva de cada evento para crear películas únicas e inolvidables.',
     image: './jorge1.jpeg',
-    socials: { instagram: '#', mail: '#' }
+    socials: { instagram: 'https://www.instagram.com/enfoque_9' }
   },
   {
-    name: 'Nacho Giovanetti',
+    name: 'Nacho Giovannetti',
     role: 'Fotografía & Producción',
     description: 'Enfocado en documentar la espontaneidad y belleza de cada evento. Experto en iluminación y composición dinámica para resultados impactantes.',
     image: './nacho1.jpeg',
-    socials: { instagram: '#', mail: '#' }
+    socials: { instagram: 'https://www.instagram.com/ignacio_giovannetti_foto_arte' }
   }
 ];
 
@@ -43,8 +43,7 @@ const Team: React.FC = () => {
               <div className="team-image-container">
                 <img src={member.image} alt={member.name} className="team-image" />
                 <div className="team-socials">
-                  <a href={member.socials.instagram} className="team-social-link"><Instagram size={18} /></a>
-                  <a href={member.socials.mail} className="team-social-link"><Mail size={18} /></a>
+                  <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="team-social-link"><Instagram size={18} /></a>
                 </div>
               </div>
               <div className="team-info">

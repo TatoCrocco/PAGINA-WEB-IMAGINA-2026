@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
             Productora audiovisual especializada en fotografía y video cinematográfico para eventos sociales.
           </p>
           <div className="social-links">
-            <a href="#" className="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/imagina.film/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
               <Instagram size={20} />
             </a>
-            <a href="#" className="social-link" aria-label="Facebook">
+            <a href="https://www.facebook.com/Imagina.vc" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
               <Facebook size={20} />
             </a>
             <a href="#" className="social-link" aria-label="YouTube">
@@ -29,15 +29,15 @@ const Footer: React.FC = () => {
           <ul className="contact-list">
             <li>
               <MapPin size={16} />
-              <span>Ubicación, Ciudad</span>
+              <span>Villa Constitución, Santa Fe</span>
             </li>
             <li>
               <Phone size={16} />
-              <span>+123 456 7890</span>
+              <span>341 402 4527</span>
             </li>
             <li>
               <Mail size={16} />
-              <span>contacto@imaginaproductora.com</span>
+              <span>contacto@imaginafilm.com.ar</span>
             </li>
           </ul>
         </div>
