@@ -7,21 +7,21 @@ const teamMembers = [
     name: 'Tato Crocco',
     role: 'Fotógrafo, Filmmaker & Editor',
     description: 'Creador de contenido audiovisual. Apasionado por la narrativa visual y especializado en capturar la emoción pura de cada momento con un enfoque cinemático.',
-    image: './tato.jpeg',
+    image: './tato1.jpeg',
     socials: { instagram: '#', mail: '#' }
   },
   {
     name: 'Jorge Valido',
     role: 'Filmmaker & Piloto de Drone',
     description: 'Especialista en narrativa audiovisual y tomas aéreas impresionantes. Con su ojo cinematográfico y destreza técnica, Jorge eleva la perspectiva de cada evento para crear películas únicas e inolvidables.',
-    image: './jorge.jpg',
+    image: './jorge1.jpeg',
     socials: { instagram: '#', mail: '#' }
   },
   {
     name: 'Nacho Giovanetti',
     role: 'Fotografía & Producción',
     description: 'Enfocado en documentar la espontaneidad y belleza de cada evento. Experto en iluminación y composición dinámica para resultados impactantes.',
-    image: './nacho.jpeg',
+    image: './nacho1.jpeg',
     socials: { instagram: '#', mail: '#' }
   }
 ];
