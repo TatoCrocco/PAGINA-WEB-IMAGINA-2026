@@ -42,7 +42,16 @@ const Navbar: React.FC = () => {
             </li>
           ))}
           <li>
-            <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.75rem' }}>Contacto</a>
+            <a href="https://wa.me/543414024527?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20consultar%20por%20un%20presupuesto%20para%20reservar%20una%20fecha%20para%20mi%20evento." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="btn btn-primary" 
+               style={{ padding: '0.5rem 1rem', fontSize: '0.75rem' }}>
+              Reservar Fecha
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="btn btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.75rem' }}>Contacto</a>
           </li>
         </ul>
 
@@ -63,7 +72,16 @@ const Navbar: React.FC = () => {
             </li>
           ))}
           <li>
-            <a href="#contact" className="btn btn-primary" onClick={toggleMenu}>Contacto</a>
+            <a href="https://wa.me/543414024527?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20consultar%20por%20un%20presupuesto%20para%20reservar%20una%20fecha%20para%20mi%20evento." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="btn btn-primary" 
+               onClick={toggleMenu}>
+              Reservar Fecha
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="btn btn-outline" onClick={toggleMenu}>Contacto</a>
           </li>
         </ul>
       </div>
